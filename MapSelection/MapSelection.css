@@ -1,0 +1,67 @@
+.game_map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rebeccapurple;
+    padding: 5rem;
+}
+
+.game_items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.game_item {
+    margin: 10px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+    height: 200px; /* Fixed height for consistency */
+    width: 200px; /* Fixed width for consistency */
+    overflow: hidden; /* Ensures nothing spills out of the container */
+}
+
+.game_item img {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Ensures the image aspect ratio is maintained */
+}
+
+.game_item:hover {
+    transform: scale(1.1); /* Slightly enlarges the item on hover */
+}
+
+.game_title {
+    font-size: 3rem;
+    font-family: 'Monospace';
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        to right, 
+        rgba(193, 40, 40, 0) 0%, 
+        rgba(255, 255, 255, 0.75) 50%, 
+        rgba(168, 24, 24, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: moveLight 3s ease-in-out infinite;
+}
+
+@keyframes moveLight {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
